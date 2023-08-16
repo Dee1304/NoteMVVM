@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="ContentViewModel"
+            type="com.example.notemvvm.ContentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:layout_margin="10dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/white"
+            android:minLines="1"
+            android:hint="Title"
+            android:id="@+id/edtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={ContentViewModel.title}" />
+
+        <EditText
+            android:layout_margin="10dp"
+            android:textSize="18dp"
+            android:minLines="1"
+            android:hint="Contents"
+            android:backgroundTint="@color/white"
+            android:id="@+id/edtContents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={ContentViewModel.contents}" />
+
+        <Button
+            android:layout_margin="50dp"
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Add"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</layout>
